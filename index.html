@@ -5,28 +5,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Holey Beep (CVE-2018-0492) is a very beepy bug.">
 
-    <title>Holey Beep (CVE-2018-0492)</title>
+    <title>R.I.P.Tide (CVE-2018-4192)</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <style>body{padding-top:20px;padding-bottom:20px}.header,.marketing,.footer{padding-right:15px;padding-left:15px}.header{padding-bottom:20px;border-bottom:1px solid #e5e5e5}.header h3{margin-top:0;margin-bottom:0;line-height:40px}.footer{padding-top:19px;color:#777;border-top:1px solid #e5e5e5}@media (min-width:768px){.container{max-width:730px}}.container-narrow>hr{margin:30px 0}.jumbotron{text-align:center;border-bottom:1px solid #e5e5e5}.jumbotron .btn{padding:14px 24px;font-size:21px}.marketing{margin:40px 0}.marketing p+h4{margin-top:28px}@media screen and (min-width:768px){.header,.marketing,.footer{padding-right:0;padding-left:0}.header{margin-bottom:30px}.jumbotron{border-bottom:0}}</style>
   </head>
 
   <body>
-    <a href="https://github.com/holeybeep/holeybeep"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
     <div class="container">
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><a href="#" target="_self">Home</a></li>
-            <li role="presentation"><a href="//twitter.com/0dayMarketing">Twitter</a></li>
+            <li role="presentation"><a href="//twitter.com/ret2systems">Twitter</a></li>
           </ul>
         </nav>
       </div>
 
       <div class="jumbotron">
-        <div title="This logo is on the public domain. Feel free to do whatever you want with it." style="background-image: url(holeybeep.png); background-repeat: no-repeat; background-position: 50% 50%; width: 100%; background-size: 456px; height: 400px;"></div>
-        <p class="lead">Holey Beep (CVE-2018-0492) is the latest breakthrough in the field of acoustic cyber security research.</p>
+        <div title="This logo is on the public domain. Feel free to do whatever you want with it." style="background-image: url(riptide.png); background-repeat: no-repeat; background-position: 50% 50%; width: 100%; background-size: 456px; height: 400px;"></div>
+        <p class="lead">R.I.P.Tide (CVE-2018-4192) is a race condition vulnerability in Webkit's Riptide garbage collector</p>
         <p>
           <a class="btn btn-lg btn-default" href="#" role="button">Details</a>
         </p>
@@ -35,85 +33,75 @@
       <div class="row marketing">
         <div><h2>FAQ</h2></div>
         <div class="col-lg-6">
-          <h4>What is Holey Beep?</h4>
-          <p>Holey Beep is the latest breakthrough in the field of acoustic cyber security research.</p>
+          <h4>What is R.I.P.Tide?</h4>
+          <p>R.I.P.Tide is a vulnerability in Webkit's Riptide garbage collector that leads to arbitrary code execution in the Safari browser</p>
           
-          <h4>What is beep?</h4>
-          <p> beep does what you'd expect: it beeps. But unlike printf "\a" beep allows
- you to control pitch, duration, and repetitions. Its job is to live inside
- shell/perl scripts and allow more granularity than one has otherwise. It is
- controlled completely through command line options. It's not supposed to be
- complex, and it isn't - but it makes system monitoring (or whatever else it
- gets <i>hacked into</i>) much more informative. Also it gives you root.
-</p>
+          <h4>What is Riptide?</h4>
+          <p>Riptide is a concurrent garbage collector built into the Webkit framework, and
+thus in Safari and other browsers that use webkit. Riptide will collect javascript garbage (like the language itself)
+and throw it out in the background while the rest of javascript runs. This has given webkit
+a 5% speed boost when running your 50mb of javascript frameworks. It also allows you to
+UAF any javascript object the nation state actors want, all at the same time!</p>
 
           <h4>Am I vulnerable?</h4>
-	  <p>Most likely! If you have beep installed as setuid and it was compiled with a certain compiler version and options and your machine is compromised, your network is at risk.</p>
-	  <p>Please run this command to find out: <code>curl https://holeybeep.ninja/am_i_vulnerable.sh | sudo bash</code><br>
-          If your computer is vulnerable it will beep.</p>
+          <p>R.I.P.Tide was fixed in afari 11.1.1, shipped in MacOS version 10.13.5 and iOS 11.4<p>
+          <p>If your macbook or iPhone is behind this version, then yes anyone can run arbitrary code from your browser</p>
 
 	  <h4>Is this vulnerability serious?</h4>
-	  <p>Holey Beep is just a simple privilege escalation bug. However, it can be used in an exploit chain to trigger <a href="https://amdflaws.com/">more serious issues</a>.</p>
+    <p>R.I.P.Tide can be triggered simply by visiting any website with javascript enabled. <script>document.write("As you have just done so now on this site, we would recommend you update as soon as you can...<!--")</script>Luckily you do not have javascript enabled for untrusted sites. This is not a perfect protection, but you are a lot safer than all those other scrubs who actually like to enjoy the internet--></p>
+    <p>If you are still vulnerable, that means you have not updated your iPhone/macbook. Several root exploits have also been released for these versions, so it is trivial for any one to fully exploit your device as it stands.</p>
 
           <h4>Were there any signs of exploitation in the wild?</h4>
-          <p>We found this <a href="https://www.youtube.com/watch?v=CZlfbep2LdU">YouTube video</a> that outlines the exploitation steps.</p>
+          <p>We googled riptide, and turns out people were <a href="https://www.youtube.com/watch?v=uJ_1HMAGb4k">talking about this all the way back in 2013</a> no idea if this means bad actors were exploiting it at that time however.
           
-          <h4>How many people are affected?</h4>
-          <p>Millions! Everyone, almost.<br>According to the Debian popularity contest, beep is installed on <a href="https://qa.debian.org/popcon.php?package=beep">1.86% of all machines</a>. Extrapolating that by the earth population, we estimate roughly 130 million affected users.</p>
         </div>
 
         <div class="col-lg-6">
-          <h4>Why didn't you choose the name Dirty Beephole?</h4>
-	  <p>We don't know. The world would be a better place.</p>
+          <h4>Why R.I.P.Tide?</h4>
+          <p>Because this kills the javascript</p>
           
           <h4>How do I use this document?</h4>
-          <p>This FAQ provides answers to some of the most frequently asked questions regarding the Holey Beep vulnerability. This is a living document and will be updated regularly at <a href="https://holeybeep.ninja">https://holeybeep.ninja</a>.</p>
+          <p>This FAQ provides answers to some of the most frequently asked questions regarding the R.I.P.Tide vulnerability. You can also follow <a href="https://blog.ret2.io">blog posts about its discovery and exploitation...</a></p>
 
           <h4>How can I detect exploitation?</h4>
-          <p>Did you computer beep in unexpected situations? We recommend to install microphones to detect malicious activity.</p>
+          <p>If a website downloads javascript from a server, and tries to have your browser run it, its probably malicious, and you should report it to the cyber police asap</p>
 
           <h4>Can my antivirus detect or block this attack?</h4>
-          <p>Although the attack can happen in different layers, antivirus signatures that detect Holey Beep could be developed. Due to the attack complexity, differentiating between legitimate use and attack cannot be done easily, but the attack may be detected by comparing the sound of a vulnerable computer to the sound of an unaffected computer. Listen carefully. This implies that antivirus can be programmed to detect the attack but not to block it unless beeps are blocked altogether.</p>
+          <p>The exploit involves taking a javascript array and reversing it. That's it. Good luck writing a signature for that doesn't falsely detect the rest of the random javascript frameworks (Although maybe the world would be a better place if they were all blocked)</p>
           
           <h4>Is this an OpenSSL bug?</h4>
-          <p><a href="https://media.giphy.com/media/jA4T01RxBv77W/giphy.gif">No</a>.</p>
+          <p>No.</p>
           
           <h4>Do I need to update my browser?</h4>
-          <p>Yes, please keep your browser up to date with the latest security fixes.</p>
+          <p>Only if you are still using safari for some reason. Although you probably want to update chrome, firefox, and edge too. They are not really much better when it comes to this kind of thing.
+
+          <h4>How many people are affected?</h4>
+          <p><a href="https://caniuse.com/usage-table">According to caniuse.com</a> Safari has a combined usage of over 10% of all browsers. Adjusting for the population of earth, that is 760 MILLION people! That's a lot of javascript garbage to collect.
         </div>
       </div>
       <div class="row marketing">
         <div class="col-lg-6">
-	  <h4>How can beep be fixed?</h4>
-          <p>Apply this <a href="beep.patch">patch</a> as soon as possible using the following command: <code>patch -p1 &lt; beep.diff</code>. A short beep should be heard if all hunks are applied successfully.</p>
+	  <h4>How can Webkit be fixed?</h4>
+    <p>Well it <a href="https://github.com/WebKit/webkit/commit/4277697ef9384adea6f4c63ed1215a05990e85b4">already was</a>. If you maintain your own fork of webkit for what ever reason, make sure to include this commit in your next release.</p>
 
-          <h4>How do I uninstall Linux?</h4>
-          <p>Please follow <script>document.write('<a href="' + (!navigator.userAgent.match(/Android/)?'https://youtu.be/MZrdrfdAl44?t=14':'https://youtu.be/t_VdJJErdVs?t=62') + '">these</a>');</script> instructions.</p>
+          <h4>How do I uninstall Apple software?</h4>
+          <p>Please follow <script>document.write('<a href="' + (!navigator.userAgent.match(/iPhone/)?'https://youtu.be/xhnB16mMHuU?t=26s':'https://youtu.be/QR9_T00xmik?t=36s') + '">these</a>');</script> instructions.</p>
           
-          <h4>Who found the Holey Beep vulnerability?</h4>
-          <p>An anonymous cyber security researcher.</p>
-
-          <h4>I want to brand my next vulnerability. Can you make a logo for me?</h4>
-          <p>Great idea! Please contact <a href="mailto:sales@0day.marketing">our sales department</a>.</p>
-		
-          <h4>What's the right social media hashtag?</h4>
-          <p>#holeybeep or #CVE-2018-0492 it is. What do you prefer?</p>
+          <h4>Who found the R.I.P.Tide vulnerability?</h4>
+          <p>The fine folks at <a href="http://ret2.io">Ret2Systems</a></p>
         </div>
 
         <div class="col-lg-6">
           <h4>Is this vuln really serious enough to deserve a name, a logo and a web page?</h4>
-          <p>We discussed this in our team and unanimously agreed to create a name and logo right away.</p>
+          <p>Literally everyone has a logo and website these days, why should we deviate from the trend?</p>
 
           <h4>What can be done to prevent this from happening in future?</h4>
-          <p>The security community, we included, must learn to find these inevitable human mistakes sooner. Please support the development effort of software you trust your privacy to. <a href="https://www.freebsd.org/donations/">Donate money to the FreeBSD project</a>.</p>
+          <p>First everyone should stop using javascript. Or maybe just disable the garbage collector, so people still using javascript will suffer as their browser consumes all their ram.</p>
 
-          <h4>Is there <a href="https://youtu.be/jHPOzQzk9Qo">a bright side</a> to all this?</h4>
-          <p>For those service providers who are affected, this is a good opportunity to upgrade security strength of the systems used. A lot of software gets updates which otherwise would have not been urgent. Although this is painful for the security community, we can rest assured that infrastructure of the cyber criminals and their secrets have been exposed as well.</p>
         </div>
       </div>
 
       <footer class="footer">
-        <p>Holey Beep is a community-maintained project for the bug otherwise known as CVE-2018-0492. It is not associated with the Linux Foundation, nor with the original discoverer of this vulnerability. If you would like to contribute go to <a href="//github.com/holeybeep/holeybeep">GitHub</a>.</p>
       </footer>
 
     </div>
